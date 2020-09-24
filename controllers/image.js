@@ -5,10 +5,9 @@ const app = new Clarifai.App({
 });
 
 const handleApiCall = (req, res) => {
-
+//.predict(Clarifai.FACE_DETECT_MODEL, req.body.input)\
   app.models
- //.predict(Clarifai.FACE_DETECT_MODEL, req.body.input)\
- .predict('c393e052f2e04623b28eacc298586b6c', req.body.input)
+ .predict(Clarifai.CELEBRITY_DETECT_MODEL, req.body.input)
  .then(data => {
     res.json(data);
  })
