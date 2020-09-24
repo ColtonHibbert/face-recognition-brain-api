@@ -7,7 +7,7 @@ const app = new Clarifai.App({
 const handleApiCall = (req, res) => {
 //.predict(Clarifai.FACE_DETECT_MODEL, req.body.input)\
   app.models
- .predict(Clarifai.CELEBRITY_DETECT_MODEL, req.body.input)
+ .predict(Clarifai.DEMOGRAPHICS_DETECT_MODEL, req.body.input)
  .then(data => {
     res.json(data);
  })
